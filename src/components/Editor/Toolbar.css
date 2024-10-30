@@ -1,0 +1,39 @@
+.editor-toolbar {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  gap: 15px;
+}
+
+.toolbar-group {
+  display: flex;
+  gap: 5px;
+  padding: 0 10px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.toolbar-group:last-child {
+  border-right: none;
+}
+
+.toolbar-button {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #495057;
+  transition: all 0.2s ease;
+}
+
+.toolbar-button:hover {
+  background-color: #e9ecef;
+  border-color: #ced4da;
+}
+
+.toolbar-button:active {
+  background-color: #dee2e6;
+} 
