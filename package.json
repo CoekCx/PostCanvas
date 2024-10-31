@@ -1,5 +1,5 @@
 {
-  "name": "postcanvas",
+  "name": "blogcanvas",
   "version": "1.0.0",
   "description": "A React-based blog post editor that lets you create and format posts with custom HTML and styling.",
   "main": "index.js",

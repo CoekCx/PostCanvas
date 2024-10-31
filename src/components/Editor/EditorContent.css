@@ -1,6 +1,7 @@
 .editor-content-wrapper {
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .editor-gutter {
@@ -8,6 +9,8 @@
   background-color: #f8f9fa;
   border-right: 1px solid #e0e0e0;
   cursor: pointer;
+  min-height: 400px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .editor-gutter:hover {
@@ -16,8 +19,7 @@
 
 .editor-content {
   position: relative;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
   line-height: 1.2;
   white-space: pre-wrap;
   cursor: text;
@@ -26,6 +28,13 @@
   overflow-wrap: break-word;
   word-break: break-all;
   max-width: 100%;
+  min-height: 400px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .editor-content {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
 }
 
 .editor-content::before {
@@ -37,6 +46,11 @@
   height: 100%;
   background-color: white;
   cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+.dark .editor-content::before {
+  background-color: #2d2d2d;
 }
 
 .editor-content h1 {
@@ -45,16 +59,28 @@
   color: #2c3e50;
 }
 
+.dark .editor-content h1 {
+  color: #ffffff;
+}
+
 .editor-content h2 {
   font-size: 1.5em;
   margin-bottom: 0.5em;
   color: #2c3e50;
 }
 
+.dark .editor-content h2 {
+  color: #ffffff;
+}
+
 .editor-content h3 {
   font-size: 1.17em;
-  margin-bottom: 0.5em;
+  padding-bottom: 20px;
   color: #2c3e50;
+}
+
+.dark .editor-content h3 {
+  color: #ffffff;
 }
 
 .editor-content p {
@@ -104,4 +130,39 @@
 .editor-content > p:empty::after {
   content: '\200B';
   display: inline;
+}
+
+.dark .editor-gutter {
+  background-color: #252525;
+  border-right-color: #404040;
+}
+
+.dark .editor-gutter:hover {
+  background-color: #333333;
+}
+
+.dark .editor-toolbar {
+  background-color: #252525;
+  border-bottom-color: #404040;
+}
+
+.dark .toolbar-button {
+  background-color: #333333;
+  border-color: #404040;
+  color: #e0e0e0;
+}
+
+.dark .toolbar-button:hover {
+  background-color: #404040;
+}
+
+.dark .toolbar-group {
+  border-right-color: #404040;
+}
+
+/* Selection color in dark mode */
+.dark .editor-content::selection,
+.dark .editor-content *::selection {
+  background-color: #4a4a4a;
+  color: #ffffff;
 }

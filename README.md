@@ -1,4 +1,4 @@
-# **PostCanvas**  
+# **Blog Canvas**  
 A React-based blog post editor that lets you create and format posts with custom HTML and styling.
 
 ## **Features**
