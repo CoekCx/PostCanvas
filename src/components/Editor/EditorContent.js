@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './EditorContent.css';
 
-function EditorContent({ content, setContent }) {
-  const handleInput = (e) => {
-    setContent(e.target.innerHTML);
-  };
+function EditorContent({ content, onInput }) {
+  const editorRef = useRef(null);
+
+  useEffect(() => {
+    if (editorRef.current && content !== editorRef.current.innerHTML) {
+      editorRef.current.innerHTML = content;
+    }
+  }, [content]);
 
   return (
-    <div
+    <div 
+      ref={editorRef}
       className="editor-content"
       contentEditable={true}
-      onInput={handleInput}
-      dangerouslySetInnerHTML={{ __html: content }}
+      onInput={onInput}
     />
   );
 }

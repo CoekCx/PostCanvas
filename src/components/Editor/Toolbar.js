@@ -48,6 +48,33 @@ function Toolbar({ onFormat }) {
           <i className="fas fa-underline"></i>
         </button>
       </div>
+
+      <div className="toolbar-group">
+        <button
+          onClick={() => onFormat('justifyLeft')}
+          className="toolbar-button"
+        >
+          <i className="fas fa-align-left"></i>
+        </button>
+        <button
+          onClick={() => onFormat('justifyCenter')}
+          className="toolbar-button"
+        >
+          <i className="fas fa-align-center"></i>
+        </button>
+        <button
+          onClick={() => onFormat('justifyRight')}
+          className="toolbar-button"
+        >
+          <i className="fas fa-align-right"></i>
+        </button>
+        <button
+          onClick={() => onFormat('justifyFull')}
+          className="toolbar-button"
+        >
+          <i className="fas fa-align-justify"></i>
+        </button>
+      </div>
     </div>
   );
 }

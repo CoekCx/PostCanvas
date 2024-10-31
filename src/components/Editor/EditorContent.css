@@ -1,6 +1,24 @@
+.editor-content-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.editor-gutter {
+  width: 30px;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+.editor-gutter:hover {
+  background-color: #e9ecef;
+}
+
 .editor-content {
+  flex: 1;
   min-height: 300px;
   padding: 20px;
+  padding-left: 10px;
   outline: none;
   font-size: 16px;
   line-height: 1.6;
@@ -27,4 +45,31 @@
 
 .editor-content p {
   margin-bottom: 1em;
+}
+
+/* Add these new styles for text alignment */
+.editor-content [style*="text-align: left"] {
+  text-align: left !important;
+}
+
+.editor-content [style*="text-align: center"] {
+  text-align: center !important;
+}
+
+.editor-content [style*="text-align: right"] {
+  text-align: right !important;
+}
+
+.editor-content [style*="text-align: justify"] {
+  text-align: justify !important;
+}
+
+.editor-content::selection {
+  background-color: #282c34;
+  color: white;
+}
+
+.editor-content *::selection {
+  background-color: #282c34;
+  color: white;
 } 
