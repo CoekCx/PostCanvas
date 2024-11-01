@@ -11,13 +11,76 @@ function TextEditor() {
     // Set up undo/redo keyboard shortcuts
     const handleKeyDown = (e) => {
       if (e.ctrlKey || e.metaKey) {
-        if (e.key === 'z') {
-          e.preventDefault();
-          if (e.shiftKey) {
-            document.execCommand('redo');
-          } else {
-            document.execCommand('undo');
-          }
+        switch(e.key.toLowerCase()) {
+          // Existing shortcuts
+          case 'z':
+            e.preventDefault();
+            if (e.shiftKey) {
+              document.execCommand('redo');
+            } else {
+              document.execCommand('undo');
+            }
+            break;
+          
+          // Formatting shortcuts
+          case 'b':
+            e.preventDefault();
+            handleFormat('bold');
+            break;
+          case 'i':
+            e.preventDefault();
+            handleFormat('italic');
+            break;
+          case 'u':
+            e.preventDefault();
+            handleFormat('underline');
+            break;
+          
+          // Heading shortcuts
+          case '1':
+            e.preventDefault();
+            handleFormat('formatBlock', 'h1');
+            break;
+          case '2':
+            e.preventDefault();
+            handleFormat('formatBlock', 'h2');
+            break;
+          case '3':
+            e.preventDefault();
+            handleFormat('formatBlock', 'h3');
+            break;
+          case '0':
+            e.preventDefault();
+            handleFormat('formatBlock', 'p');
+            break;
+          
+          // Alignment shortcuts
+          case 'l':
+            e.preventDefault();
+            handleFormat('justifyLeft');
+            break;
+          case 'e':
+            e.preventDefault();
+            handleFormat('justifyCenter');
+            break;
+          case 'r':
+            e.preventDefault();
+            handleFormat('justifyRight');
+            break;
+          case 'j':
+            e.preventDefault();
+            handleFormat('justifyFull');
+            break;
+          
+          // List shortcuts
+          case '.':
+            e.preventDefault();
+            handleFormat('insertUnorderedList');
+            break;
+          case ',':
+            e.preventDefault();
+            handleFormat('insertOrderedList');
+            break;
         }
       }
     };

@@ -75,6 +75,21 @@ function Toolbar({ onFormat }) {
           <i className="fas fa-align-justify"></i>
         </button>
       </div>
+
+      <div className="toolbar-group">
+        <button
+          onClick={() => onFormat('insertUnorderedList')}
+          className="toolbar-button"
+        >
+          <i className="fas fa-list-ul"></i>
+        </button>
+        <button
+          onClick={() => onFormat('insertOrderedList')}
+          className="toolbar-button"
+        >
+          <i className="fas fa-list-ol"></i>
+        </button>
+      </div>
     </div>
   );
 }

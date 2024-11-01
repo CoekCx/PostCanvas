@@ -1,14 +1,55 @@
-# **Blog Canvas**  
-A React-based blog post editor that lets you create and format posts with custom HTML and styling.
+# Blog Canvas
 
-## **Features**
-- Customizable formatting to match your HTML preferences.  
-- Real-time preview of blog posts.  
-- Lightweight and easy to integrate.
+Blog Canvas is a modern, feature-rich text editor built with React that supports both light and dark themes. It provides a seamless writing experience with a robust formatting toolbar and keyboard shortcuts.
 
-## **Getting Started**
+![Blog Canvas Screenshot](./assets/Dark Mode 1.png)
+![Blog Canvas Screenshot](./assets/Dark Mode 2.png)
+![Blog Canvas Screenshot](./assets/Light Mode 1.png)
+![Blog Canvas Screenshot](./assets/Light Mode 2.png)
 
-1. **Clone the repository:**
+## Features
+
+### Rich Text Editing
+- Full formatting toolbar with common text editing options
+- Support for headings (H1, H2, H3)
+- Text alignment controls
+- Lists (ordered and unordered)
+- Basic text formatting (bold, italic, underline)
+
+### Dark Mode Support
+- Elegant dark theme implementation
+- Smooth transitions between themes
+- Persistent theme selection
+
+### Advanced Editor Features
+- Line selection with gutter click-and-drag
+- Keyboard shortcuts for common operations
+- Undo/Redo functionality
+- Clean, responsive interface
+
+## Keyboard Shortcuts
+
+| Action | Windows/Linux | Mac |
+|--------|--------------|-----|
+| Bold | Ctrl + B | ⌘ + B |
+| Italic | Ctrl + I | ⌘ + I |
+| Underline | Ctrl + U | ⌘ + U |
+| Heading 1 | Ctrl + 1 | ⌘ + 1 |
+| Heading 2 | Ctrl + 2 | ⌘ + 2 |
+| Heading 3 | Ctrl + 3 | ⌘ + 3 |
+| Paragraph | Ctrl + 0 | ⌘ + 0 |
+| Align Left | Ctrl + L | ⌘ + L |
+| Center | Ctrl + E | ⌘ + E |
+| Align Right | Ctrl + R | ⌘ + R |
+| Justify | Ctrl + J | ⌘ + J |
+| Bullet List | Ctrl + . | ⌘ + . |
+| Numbered List | Ctrl + , | ⌘ + , |
+| Undo | Ctrl + Z | ⌘ + Z |
+| Redo | Ctrl + Shift + Z | ⌘ + Shift + Z |
+
+## Installation
+
+1. Clone the repository:
    ```bash
    git clone https://github.com/CoekCx/PostCanvas
    cd PostCanvas
