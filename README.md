@@ -2,10 +2,13 @@
 
 Blog Canvas is a modern, feature-rich text editor built with React that supports both light and dark themes. It provides a seamless writing experience with a robust formatting toolbar and keyboard shortcuts.
 
-![Blog Canvas Screenshot](./assets/Dark Mode 1.png)
-![Blog Canvas Screenshot](./assets/Dark Mode 2.png)
-![Blog Canvas Screenshot](./assets/Light Mode 1.png)
-![Blog Canvas Screenshot](./assets/Light Mode 2.png)
+### Dark Mode
+![Blog Canvas Dark Mode Screenshot 1](./assets/Dark%20Mode%201.png)
+![Blog Canvas Dark Mode Screenshot 2](./assets/Dark%20Mode%202.png)
+
+### Light Mode
+![Blog Canvas Light Mode Screenshot 1](./assets/Light%20Mode%201.png)
+![Blog Canvas Light Mode Screenshot 2](./assets/Light%20Mode%202.png)
 
 ## Features
 
